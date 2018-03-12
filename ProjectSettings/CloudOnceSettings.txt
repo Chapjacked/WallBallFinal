@@ -1,0 +1,30 @@
+{
+	"AchievementIDs":[],
+	"LeaderboardIDs":[
+		{
+			"InternalID":"GooglePlayLeaderboard",
+			"AppleID":"",
+			"GoogleID":"CgkI29SRhbwNEAIQAQ",
+			"AmazonID":""
+		}
+	],
+	"CloudVariables":[
+		{
+			"Key":"HighScore",
+			"Type":"0",
+			"DefaultValue":"0",
+			"PersistenceType":"1",
+			"AllowNegative":false
+		}
+	],
+	"AppleSupported":true,
+	"GoogleSupported":true,
+	"AmazonSupported":false,
+	"AndroidPlatform":"1",
+	"GoogleAppID":"462793501275",
+	"GoogleSetupRun":true,
+	"DebugModeEnabled":false,
+	"Version":"2.5.0",
+	"APIKey":"",
+	"SettingsLocation":"0"
+}

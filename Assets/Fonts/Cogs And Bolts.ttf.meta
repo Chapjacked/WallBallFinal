@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f8d02f353d1d3994daf7d5bc2ff3b65d
+timeCreated: 1515788076
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cogs And Bolts
+  fontNames:
+  - Cogs And Bolts
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

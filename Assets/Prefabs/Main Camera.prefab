@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1242830850332382}
+  m_IsPrefabParent: 1
+--- !u!1 &1242830850332382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4552021085986962}
+  - component: {fileID: 20679132376243964}
+  - component: {fileID: 124093064738467660}
+  - component: {fileID: 81280729258085044}
+  - component: {fileID: 114789849892196250}
+  - component: {fileID: 114535199165670482}
+  m_Layer: 10
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4552021085986962
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242830850332382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.87, y: 22.25, z: -30.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &20679132376243964
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242830850332382}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 3
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &81280729258085044
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242830850332382}
+  m_Enabled: 1
+--- !u!114 &114535199165670482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242830850332382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba5451c4b24f464985b489186e4354f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnBallScript: {fileID: 114789849892196250}
+  KillBallScript: {fileID: 0}
+  BallBehaviorScript: {fileID: 114297401853828798, guid: 469000a7db2438d47aa2f8d09a78553c,
+    type: 2}
+  ScoringScript: {fileID: 0}
+  RotateWallScript: {fileID: 0}
+  HitSideWallRightScript: {fileID: 0}
+  HitSideWallLeftScript: {fileID: 0}
+  SpawnMovingObjectScript: {fileID: 0}
+  ShowAdScript: {fileID: 0}
+  GameManager: {fileID: 114361939046642908, guid: 5d59567e1a0b98440b292d429fa6016d,
+    type: 2}
+  PlayerCamera: {fileID: 20679132376243964}
+  ObjectThatWasHit: 
+  EndOfRoundPanel: {fileID: 0}
+  WallPieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fSumOfCatchesAndWallHitMult: 0
+  bBallWasCaught: 0
+  MainRoomLight: {fileID: 0}
+  MainRoomLightSettings: {fileID: 0}
+  fRotation: 0.25
+  WallMaterials:
+  - {fileID: 2100000, guid: 30154be4ad9cb06409633edd490232b7, type: 2}
+  - {fileID: 2100000, guid: 8b347952264371246840f027d1d4e218, type: 2}
+  - {fileID: 2100000, guid: 43043dd157ea55a448ffbf891b64be5d, type: 2}
+  - {fileID: 2100000, guid: 246b9edc616f25a4bbff063d864c59b8, type: 2}
+  WallMaterialComponent: {fileID: 0}
+  numCounterForMissedCatchesBeforeAd: 0
+  BallSFXSource: {fileID: 82571437835858752, guid: 4c371f02e0105b6488501afd8ddafa0a,
+    type: 2}
+  CaughtBallSFXClip: {fileID: 8300000, guid: 8485b49722d3e9a4e9eaeebfac7e5569, type: 3}
+  BallLight: {fileID: 108912411280544194, guid: 469000a7db2438d47aa2f8d09a78553c,
+    type: 2}
+  SoundController: {fileID: 1905749923776952, guid: 4c371f02e0105b6488501afd8ddafa0a,
+    type: 2}
+--- !u!114 &114789849892196250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242830850332382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9623c2f265afbf24f910813922a2e19b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BallBehaviorScript: {fileID: 114297401853828798, guid: 469000a7db2438d47aa2f8d09a78553c,
+    type: 2}
+  CatchBallScript: {fileID: 114535199165670482}
+  ScoringScript: {fileID: 114755489214798178, guid: 37c26ac40d1fad14290b1323d357b823,
+    type: 2}
+  PlayerCamera: {fileID: 20679132376243964}
+  Ball: {fileID: 1610745812201434, guid: 469000a7db2438d47aa2f8d09a78553c, type: 2}
+  BallRigidbody: {fileID: 54317658354110286, guid: 469000a7db2438d47aa2f8d09a78553c,
+    type: 2}
+  isBallSpawned: 1
+  tapCoordsX: 0
+  tapCoordsY: 0
+  ObjectThatWasHit: {fileID: 0}
+  SpawnedBall: {fileID: 0}
+  SpawnedBallPosition: {x: 0, y: 0, z: 0}
+  TapPosition: {x: 0, y: 0, z: 0}
+  hardBallSpeed: 32
+  NewBallSpeed: 0
+--- !u!124 &124093064738467660
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242830850332382}
+  m_Enabled: 1

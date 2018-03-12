@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &179252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 496234}
+  - 114: {fileID: 11403190}
+  - 114: {fileID: 11446490}
+  m_Layer: 0
+  m_Name: StoreController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &496234
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.2000008, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11403190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420e38be2e0bf4c0cb525439db61df13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CharacterSelector: {fileID: 0}
+  m_SelectedCharacter: {fileID: 0}
+  m_SelectionController: {fileID: 0}
+  m_ToggleText: {fileID: 0}
+  m_SelectButton: {fileID: 0}
+--- !u!114 &11446490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ae680a6e0cc41538c6ad5becfc1727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MoneyLeft: 0
+  m_MoneyText: {fileID: 0}
+  m_CoinPriceText: {fileID: 0}
+  m_MoneyPriceText: {fileID: 0}
+  m_NameText: {fileID: 0}
+  m_ShopItems:
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 1.10000002
+    playerPrefsName: PenguinUnlockState
+    m_Name: Penguin
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 1.10000002
+    playerPrefsName: ZombieUnlockState
+    m_Name: Zombie
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 500
+    moneyCostToUnlock: 3.0999999
+    playerPrefsName: DuckUnlockState
+    m_Name: Duck
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 1.10000002
+    playerPrefsName: Giraffe1UnlockState
+    m_Name: Wacky Giraffe
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 0
+    playerPrefsName: Zombie1UnlockState
+    m_Name: Zombie 2
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 1.10000002
+    playerPrefsName: Penguin1UnlockState
+    m_Name: Penguin 2
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 1.10000002
+    playerPrefsName: Zombie3UnlockState
+    m_Name: Zombie 3
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 1.10000002
+    playerPrefsName: GiraffeUnlockState
+    m_Name: Not So Wacky Giraffe
+  - m_CharacterObject: {fileID: 0}
+    lockState: 0
+    costToUnlock: 100
+    moneyCostToUnlock: 1.10000002
+    playerPrefsName: Zombie2UnlockState
+    m_Name: Another Zombie
+  m_CharacterSelector: {fileID: 0}
+  m_UnavailableColor: {r: 0, g: 0, b: 0, a: .819607854}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 179252}
+  m_IsPrefabParent: 1
