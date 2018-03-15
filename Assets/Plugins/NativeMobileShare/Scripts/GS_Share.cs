@@ -35,7 +35,9 @@
                 item.SetActive(false);
             }
             ScreenCapture.CaptureScreenshot(s);
-            StartCoroutine(SetPreview());
+//            StartCoroutine(SetPreview());
+            
+            ShareScreenshot();
         }
 
         string shotName = "WallBallScreenshot.png";
@@ -83,11 +85,12 @@
             //print("Texture is" + tex.ToString());
             if (tex)
                 screenshotPreview.sprite = Sprite.Create(www.texture, new Rect(0, 0, tex.width, tex.height), Vector2.one * 0.5f);
-            foreach (var item in includeInScreenshot)
-            {
-                item.SetActive(false);
-
-            }
+            
+//            foreach (var item in includeInScreenshot)
+//            {
+//                item.SetActive(false);
+//            }
+            
             foreach (var item in hideFromScreenshot)
             {
                 item.SetActive(true);
