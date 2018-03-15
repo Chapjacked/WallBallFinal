@@ -16,9 +16,6 @@ public class GameManager : MonoBehaviour {
     public KillBallScript KillBallScript;
     public ScoringScript ScoringScript;
 
-    private static GameManager instance;
-    public static GameManager Instance { get { return instance; } }
-
     public int currentSkinIndex = 0;
     public int currency = 0;
     public int skinAvailability = 0;
@@ -52,9 +49,7 @@ public class GameManager : MonoBehaviour {
 
     public void Awake()
     {
-
         PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
-
 
         Debug.Log("Caching Video");
         Chartboost.cacheRewardedVideo(CBLocation.MainMenu);
@@ -73,19 +68,10 @@ public class GameManager : MonoBehaviour {
             AudioListener.volume = 1;
         }
 
-        if (instance == null)
-        {
-            instance = this;
-        }
-
-        DontDestroyOnLoad(instance);
-
         //disable settings panel by default
         SettingsPanel.SetActive(false);
 
-
         PlayerAllTimeHighScoreText = PlayerAllTimeHighScoreGameObject.GetComponent<Text>();
-
 
         if (PlayerPrefs.HasKey("HighScore"))
         {
@@ -106,7 +92,6 @@ public class GameManager : MonoBehaviour {
         PlayerAllTimeHighScoreText.text = CloudVariables.HighScore.ToString();
 
         Cloud.Storage.Save();
-
     }
 
     private void OnEnable()
