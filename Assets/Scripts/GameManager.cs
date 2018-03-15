@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using ChartboostSDK;
 using CloudOnce;
+using UnityEngine.SocialPlatforms;
 
 public class GameManager : MonoBehaviour {
 
