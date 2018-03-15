@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour {
     {
         PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
 
-        PlayerAllTimeHighScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
         Save();
     }
 
