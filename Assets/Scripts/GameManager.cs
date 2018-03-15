@@ -121,15 +121,44 @@ public class GameManager : MonoBehaviour {
     {
         if (arg0)
         {
+            Debug.LogFormat("Logged in user with id: {0}", Cloud.PlayerID);
+            
             // set player name text
             playerNameText.text = string.Format("Welcome {0}", Cloud.PlayerDisplayName);
+            Cloud.Leaderboards.LoadScores(CloudIDs.LeaderboardIDs.GooglePlayLeaderboard, OnLeaderboardDataReceived);
         }
         else
         {
             playerNameText.text = string.Empty;
         }
     }
-    
+
+    private void OnLeaderboardDataReceived(IScore[] obj)
+    {
+        Debug.LogFormat("Received {0} scores", obj.Length);
+        
+        if (obj.Length == 0)
+        {
+            return;
+        }
+
+        foreach (var s in obj)
+        {
+            Debug.LogFormat("Score {0} for playerId: {1} in leaderboardId: {2}", s.value, s.userID, s.leaderboardID);
+        }
+        
+        // Find the playter's high score.
+        var playerId = Cloud.PlayerID;
+
+        var score = obj.FirstOrDefault(s => s.userID == playerId);
+
+        if (score != null)
+        {
+            playerAllTimeHighScore = (int)score.value;
+            PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
+        }
+    }
+
     public void UpdateHighScore()
     {
         PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
