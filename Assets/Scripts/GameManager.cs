@@ -28,13 +28,25 @@ public class GameManager : MonoBehaviour {
 
     public GameObject SettingsPanel;
 
-    public int PlayerAllTimeHighScore;
+    private int playerAllTimeHighScore;
+    
+    public int PlayerAllTimeHighScore
+    {
+        get { return playerAllTimeHighScore; }
+        set
+        {
+            playerAllTimeHighScore = value;
+            
+            // Report to CloudOnce
+            Cloud.Leaderboards.SubmitScore(CloudIDs.LeaderboardIDs.GooglePlayLeaderboard, value);
+        }
+    }
     public Text PlayerAllTimeHighScoreText;
 
+    [SerializeField]
+    private Text playerNameText;
+    
     public GameObject PlayerAllTimeHighScoreGameObject;
-
-
-
 
     public void Awake()
     {
@@ -95,12 +107,29 @@ public class GameManager : MonoBehaviour {
 
     }
 
-
-    public void Update()
+    private void OnEnable()
     {
-        
+        Cloud.OnSignedInChanged += OnSignInChanged;
     }
 
+    private void OnDisable()
+    {
+        Cloud.OnSignedInChanged -= OnSignInChanged;
+    }
+    
+    private void OnSignInChanged(bool arg0)
+    {
+        if (arg0)
+        {
+            // set player name text
+            playerNameText.text = string.Format("Welcome {0}", Cloud.PlayerDisplayName);
+        }
+        else
+        {
+            playerNameText.text = string.Empty;
+        }
+    }
+    
     public void UpdateHighScore()
     {
         PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
