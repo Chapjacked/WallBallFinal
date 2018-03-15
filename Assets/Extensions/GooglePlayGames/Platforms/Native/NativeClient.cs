@@ -492,7 +492,7 @@ namespace GooglePlayGames.Native
             {
                 // Only proceed if both the fetch-self and fetch-achievements callback have
                 // completed.
-                if (mUser == null || mAchievements == null)
+                if (mUser == null)
                 {
                     GooglePlayGames.OurUtils.Logger.d("Auth not finished. User=" + mUser + " achievements=" + mAchievements);
                     return;
@@ -572,8 +572,10 @@ namespace GooglePlayGames.Native
                             }
 
                             uint currentAuthGeneration = mAuthGeneration;
-                            mServices.AchievementManager().FetchAll(
-                                results => PopulateAchievements(currentAuthGeneration, results));
+                            
+//                            mServices.AchievementManager().FetchAll(
+//                                results => PopulateAchievements(currentAuthGeneration, results));
+                            
                             mServices.PlayerManager().FetchSelf(
                                 results => PopulateUser(currentAuthGeneration, results));
                         }
