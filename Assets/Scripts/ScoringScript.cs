@@ -96,7 +96,8 @@ public class ScoringScript : MonoBehaviour
     //Max Number of Continues Used Text Game Object
     public GameObject MaxNumberOfContinuesUsed;
 
-
+    [SerializeField]
+    private Text highScoreText;
 
     // Use this for initialization
     void Start()
@@ -234,6 +235,9 @@ public class ScoringScript : MonoBehaviour
         {
             Debug.Log("Not High Score");
         }
+
+        // Show the high score text
+        highScoreText.text = GameManager.PlayerAllTimeHighScore.ToString();
 
         GameManager.UpdateHighScore();
 

@@ -4829,6 +4829,7 @@ MonoBehaviour:
   maxMissedCatchesBeforeAd: 8
   ContinueButton: {fileID: 335692967}
   MaxNumberOfContinuesUsed: {fileID: 48595517}
+  highScoreText: {fileID: 1360651237}
 --- !u!224 &310039941
 RectTransform:
   m_ObjectHideFlags: 0
