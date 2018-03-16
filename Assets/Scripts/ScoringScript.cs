@@ -17,7 +17,6 @@ public class ScoringScript : MonoBehaviour
     public HitSideWallLeftScript HitSideWallLeftScript;
     public SpawnMovingObjectScript SpawnMovingObjectScript;
     public AssignBlockColorScript AssignBlockColorScript;
-    public GameManager GameManager;
     public Game Game;
     public ShowAdScript ShowAdScript;
     //public PlayerCoinsScript PlayerCoinsScript;
@@ -147,9 +146,6 @@ public class ScoringScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
         //Calculation for number of catches
         fFinalScoreAfterMultNum = Mathf.RoundToInt(fCurrentScore * (WallsHitNum));
 
@@ -185,7 +181,6 @@ public class ScoringScript : MonoBehaviour
             ContinueButton.SetActive(false);
             MaxNumberOfContinuesUsed.SetActive(true);
         }
-
 
         //Calculation for number of catches
             fFinalScoreAfterMultNum = Mathf.RoundToInt(fCurrentScore * (WallsHitNum));
@@ -224,12 +219,9 @@ public class ScoringScript : MonoBehaviour
         if(fFinalScoreAfterMultNum > GameManager.PlayerAllTimeHighScore)
         {
             //Set the final score after multipliers from the scoring at the end of a round to the PLayer's all time high score
-            GameManager.PlayerAllTimeHighScore = Mathf.FloorToInt(fFinalScoreAfterMultNum);
+            GameManager.PlayerAllTimeHighScore = (Mathf.FloorToInt(fFinalScoreAfterMultNum));
 
             Debug.Log("Score: " + GameManager.PlayerAllTimeHighScore);
-
-            PlayerPrefs.SetInt("HighScore", GameManager.PlayerAllTimeHighScore);
-            PlayerPrefs.Save();
         }
         else
         {
@@ -244,10 +236,7 @@ public class ScoringScript : MonoBehaviour
         // Submit to leaderboard
         Leaderboards.GooglePlayLeaderboard.SubmitScore(GameManager.PlayerAllTimeHighScore);
 
-        GameManager.PlayerAllTimeHighScoreText.text = CloudVariables.HighScore.ToString();
-
         Cloud.Storage.Save();
-
     }
 
     public IEnumerator Fade()

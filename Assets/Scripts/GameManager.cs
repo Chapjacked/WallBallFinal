@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using ChartboostSDK;
@@ -27,19 +25,27 @@ public class GameManager : MonoBehaviour {
 
     public GameObject SettingsPanel;
 
-    private int playerAllTimeHighScore;
+    private static int playerAllTimeHighScore;
     
-    public int PlayerAllTimeHighScore
+    /// <summary>
+    /// Returns the player's all-time high score value.
+    /// </summary>
+    public static int PlayerAllTimeHighScore
     {
         get { return playerAllTimeHighScore; }
         set
         {
-            playerAllTimeHighScore = value;
-            
-            // Report to CloudOnce
-            Cloud.Leaderboards.SubmitScore(CloudIDs.LeaderboardIDs.GooglePlayLeaderboard, value);
+            if (value > playerAllTimeHighScore)
+            {
+                // Report to CloudOnce
+                Cloud.Leaderboards.SubmitScore(CloudIDs.LeaderboardIDs.GooglePlayLeaderboard, value);
+                playerAllTimeHighScore = value;
+
+                UpdateHighScore();
+            }
         }
     }
+    
     public Text PlayerAllTimeHighScoreText;
 
     [SerializeField]
@@ -49,8 +55,6 @@ public class GameManager : MonoBehaviour {
 
     public void Awake()
     {
-        PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
-
         Debug.Log("Caching Video");
         Chartboost.cacheRewardedVideo(CBLocation.MainMenu);
         Chartboost.cacheInterstitial(CBLocation.Default);
@@ -73,25 +77,34 @@ public class GameManager : MonoBehaviour {
 
         PlayerAllTimeHighScoreText = PlayerAllTimeHighScoreGameObject.GetComponent<Text>();
 
+        LoadStoredHighScoreValue();
+
+        PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
+        
+        Cloud.Storage.Save();
+        
+        // Update player name
+
+        if (Cloud.IsSignedIn)
+        {
+            playerNameText.text = string.Format("Welcome {0}", Cloud.PlayerDisplayName);
+        }
+    }
+
+    /// <summary>
+    /// Loads the previously known high score value so it can be immediately displayed.
+    /// </summary>
+    private void LoadStoredHighScoreValue()
+    {
         if (PlayerPrefs.HasKey("HighScore"))
         {
             PlayerAllTimeHighScore = PlayerPrefs.GetInt("HighScore");
-
         }
         else
         {
             PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
-
-            PlayerAllTimeHighScore = PlayerPrefs.GetInt("HighScore");
+            Save();
         }
-
-        PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
-
-        Save();
-
-        PlayerAllTimeHighScoreText.text = CloudVariables.HighScore.ToString();
-
-        Cloud.Storage.Save();
     }
 
     private void OnEnable()
@@ -104,9 +117,9 @@ public class GameManager : MonoBehaviour {
         Cloud.OnSignedInChanged -= OnSignInChanged;
     }
     
-    private void OnSignInChanged(bool arg0)
+    private void OnSignInChanged(bool isLoggedIn)
     {
-        if (arg0)
+        if (isLoggedIn)
         {
             Debug.LogFormat("Logged in user with id: {0}", Cloud.PlayerID);
             
@@ -141,16 +154,13 @@ public class GameManager : MonoBehaviour {
 
         if (score != null)
         {
-            playerAllTimeHighScore = (int)score.value;
-            PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
+            PlayerAllTimeHighScore = (int)score.value;
         }
     }
-
-    public void UpdateHighScore()
+    
+    public static void UpdateHighScore()
     {
         PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
-
-        PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
         Save();
     }
 
@@ -190,7 +200,7 @@ public class GameManager : MonoBehaviour {
         //Connect Google Play stuff here
     }
 
-    public void Save()
+    private static void Save()
     {
         PlayerPrefs.Save();
     }

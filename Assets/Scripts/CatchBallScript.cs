@@ -17,8 +17,6 @@ public class CatchBallScript : MonoBehaviour {
     public ShowAdScript ShowAdScript;
     public GameManager GameManager;
 
-
-
     public static bool isBallCatchable;
 
     //Player Camera
@@ -308,9 +306,9 @@ public class CatchBallScript : MonoBehaviour {
 
                     //Update the high score
                     GameManager.UpdateHighScore();
+                    
                     //Save the player profiles
                     //GameManager.Instance.Save();
-
                 }
                 else if (ObjectThatWasHit == "UI")
                 {
