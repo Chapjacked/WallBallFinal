@@ -25,17 +25,41 @@
 #if UNITY_EDITOR
             s = path;
 #endif
+            var includeStates = new bool[includeInScreenshot.Length];
+            var hideStates = new bool[hideFromScreenshot.Length];
+
+            int i = 0;
+            
             foreach (var item in includeInScreenshot)
             {
+                includeStates[i++] = item.activeSelf;
                 item.SetActive(true);
-
             }
+
+            i = 0;
+            
             foreach (var item in hideFromScreenshot)
             {
+                hideStates[i++] = item.activeSelf;
                 item.SetActive(false);
             }
+            
             ScreenCapture.CaptureScreenshot(s);
-//            StartCoroutine(SetPreview());
+
+            i = 0;
+            
+            // Restore object states
+            foreach (var item in includeInScreenshot)
+            {
+                item.SetActive(includeStates[i++]);
+            }
+
+            i = 0;
+            
+            foreach (var item in hideFromScreenshot)
+            {
+                item.SetActive(hideStates[i++]);
+            }
             
             ShareScreenshot();
         }
