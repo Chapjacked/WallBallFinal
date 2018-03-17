@@ -163,7 +163,7 @@ PlayerSettings:
     Android: com.TitanFlightStudios.WallBall
     iOS: com.TitanFlightStudios.WallBall
   buildNumber: {}
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -247,7 +247,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: bf4c56e47b888284494d43b23c99fc2e, type: 3}
-  AndroidKeystoreName: D:/TitanFlightStudios/WallBall_v2/ProjectSettings/Keystore.keystore
+  AndroidKeystoreName: D:/TitanFlightStudios/WallBallFinal/ProjectSettings/Keystore.keystore
   AndroidKeyaliasName: wallball alias
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

@@ -313,12 +313,16 @@ public class ScoringScript : MonoBehaviour
         CatchBallScript.CatchesNum = 0;
         ShowAdScript.numCurrentContinues = 0;
 
+
         //Reset whether ball hit right wall after spawning 
         HitSideWallRightScript.didBallHitSideWallRight = false;
         HitSideWallLeftScript.didBallHitSideWallLeft = false;
 
         //Reset the panel to being deactivated
         MissedBallPanel.SetActive(false);
+        ContinueButton.SetActive(true);
+        MaxNumberOfContinuesUsed.SetActive(false);
+
 
         //Reset the ball values to be ready to spawn
         SpawnBallScript.isBallSpawned = false;
