@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 using ChartboostSDK;
@@ -38,11 +39,49 @@ public class GameManager : MonoBehaviour {
             if (value > playerAllTimeHighScore)
             {
                 // Report to CloudOnce
-                Cloud.Leaderboards.SubmitScore(CloudIDs.LeaderboardIDs.GooglePlayLeaderboard, value);
+                UpdateLeaderboardScore(value);
+                
                 playerAllTimeHighScore = value;
 
                 UpdateHighScore();
             }
+        }
+    }
+
+    private static void UpdateLeaderboardScore(int score)
+    {
+        var id = string.Empty;
+        
+        #if UNITY_EDITOR
+       
+        return;
+
+        #elif UNITY_ANDROID
+        id = CloudIDs.LeaderboardIDs.GooglePlayLeaderboard;
+        #elif UNITY_IOS
+        id = CloudIDs.LeaderboardIDs.iosleaderboard;
+        #endif
+        
+        Cloud.Leaderboards.SubmitScore(id, score);
+    }
+
+    public string DefaultLeaderboardID
+    {
+        get
+        {
+            var id = "";
+
+            #if UNITY_EDITOR
+
+            return "";
+            
+            #elif UNITY_ANDROID
+            id = CloudIDs.LeaderboardIDs.GooglePlayLeaderboard;
+            #elif UNITY_IOS
+            id = CloudIDs.LeaderboardIDs.iosleaderboard;
+            #endif
+    
+            return id;
         }
     }
     
@@ -125,7 +164,8 @@ public class GameManager : MonoBehaviour {
             
             // set player name text
             playerNameText.text = string.Format("Welcome {0}", Cloud.PlayerDisplayName);
-            Cloud.Leaderboards.LoadScores(CloudIDs.LeaderboardIDs.GooglePlayLeaderboard, OnLeaderboardDataReceived);
+            
+            Cloud.Leaderboards.LoadScores(DefaultLeaderboardID, OnLeaderboardDataReceived);
         }
         else
         {

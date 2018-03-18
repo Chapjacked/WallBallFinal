@@ -29,5 +29,22 @@ namespace CloudOnce
         {
             get { return s_googlePlayLeaderboard; }
         }
+
+        private static readonly UnifiedLeaderboard s_iosleaderboard = new UnifiedLeaderboard("iosleaderboard",
+#if !UNITY_EDITOR && (UNITY_IOS || UNITY_TVOS)
+            "wall_ball_scores"
+#elif !UNITY_EDITOR && UNITY_ANDROID && CLOUDONCE_GOOGLE
+            ""
+#elif !UNITY_EDITOR && UNITY_ANDROID && CLOUDONCE_AMAZON
+            ""
+#else
+            "iosleaderboard"
+#endif
+            );
+
+        public static UnifiedLeaderboard iosleaderboard
+        {
+            get { return s_iosleaderboard; }
+        }
     }
 }

@@ -48,6 +48,28 @@ namespace CloudOnce
 #endif
                 }
             }
+
+            public static string iosleaderboard
+            {
+                get
+                {
+#if UNITY_ANDROID && !UNITY_EDITOR
+#if CLOUDONCE_AMAZON
+                    return "";
+#elif CLOUDONCE_GOOGLE
+                    return "";
+#else
+                    return string.Empty;
+#endif
+#elif (UNITY_IOS || UNITY_TVOS) && !UNITY_EDITOR
+                    return "wall_ball_scores";
+#elif UNITY_EDITOR
+                    return "iosleaderboard";
+#else
+                    return string.Empty;
+#endif
+                }
+            }
         }
     }
 }
