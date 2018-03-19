@@ -5430,8 +5430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: -1.45}
-  m_SizeDelta: {x: 16.37, y: 25.1}
+  m_AnchoredPosition: {x: -55.1, y: -0.8}
+  m_SizeDelta: {x: 37.4, y: 57.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &335850722
 CanvasRenderer:
@@ -5464,10 +5464,10 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 22
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -17498,8 +17498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000016689, y: 225}
-  m_SizeDelta: {x: 78.29001, y: 49.590027}
+  m_AnchoredPosition: {x: -0.0000016689, y: 362}
+  m_SizeDelta: {x: 175.3, y: 111.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194646606
 MonoBehaviour:
@@ -17508,7 +17508,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1194646604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -28995,8 +28995,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.8525, y: -1.7100005}
-  m_SizeDelta: {x: 45.335, y: 25.62}
+  m_AnchoredPosition: {x: 15.4, y: -1.3805255}
+  m_SizeDelta: {x: 103.6, y: 58.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2028844566
 CanvasRenderer:
@@ -29029,10 +29029,10 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 22
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

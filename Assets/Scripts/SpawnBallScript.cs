@@ -88,16 +88,9 @@ public class SpawnBallScript : MonoBehaviour {
         //IF the player taps the screen (or clicks) to throw a ball
         if (Input.GetMouseButtonDown(0) && CatchBallScript.isBallCatchable == false && isBallSpawned == false && ScoringScript.MissedBallPanel.activeSelf == false)
         {
-            if ((Input.mousePosition.y < 500 || Input.mousePosition.x < 275))
             SpawnBall();
         }
 
-    }
-
-    public void ChangeBallSpeed(float NewBallSpeed)
-    {
-        //Set the Ball speed to the new chosen ball speed
-        //BallSpeed = hardBallSpeed;
     }
 
     public void SpawnBall()
@@ -108,22 +101,6 @@ public class SpawnBallScript : MonoBehaviour {
         //Set the ball's spawn location to the tap position location (then add some units to spawn ball in front of player camera
         SpawnedBallPosition = PlayerCamera.ScreenToWorldPoint(TapPosition) + new Vector3(0, 0, 5);
 
-        //Set the variable to determine whether the ball speed is easy, med or hard
-        //if (BallSpeed == easyBallSpeed)
-        //{
-        //    ScoringScript.isEasySpeed = true;
-        //    ScoringScript.isHardSpeed = false;
-        //}
-        //else if (BallSpeed == hardBallSpeed)
-        //{
-        //    ScoringScript.isEasySpeed = false;
-        //    ScoringScript.isHardSpeed = true;
-        //}
-        //else
-        //{
-        //    ScoringScript.isEasySpeed = true;
-        //    ScoringScript.isHardSpeed = false;
-        //}
 
         //Set the SpawnedBall Game Object to the new ball being spawned into the scene using the tap position acquired earlier that was set to world coords
         SpawnedBall = Object.Instantiate(Ball, SpawnedBallPosition, Ball.transform.localRotation);
@@ -165,20 +142,10 @@ public class SpawnBallScript : MonoBehaviour {
 
             //Debug.Log("tapCoords: " + tapCoords);
             //If the player taps in the "problem area" where the tapCoordsection calculation causes the calculation to go haywire, sending the ball in a reverse tapCoordsection
-            //COULD USE MORE POLISH HERE; 
-            //throwing mechanic is usable as is though
             if (tapCoords.x < 0 && tapCoords.x > -1 || tapCoords.x > 0 && tapCoords.x < 1 && tapCoords.y < 0 && tapCoords.y > -1 || tapCoords.y > 0 && tapCoords.y < 1)
             {
-                //if (tapCoords.x < 0 && tapCoords.x > -1 || tapCoords.x > 0 && tapCoords.x < 1 && tapCoords.y < 0 && tapCoords.y > -1)
-                //{
-                //Account for x being between 0 and -1 (negative)
 
                 tapCoordsX = Mathf.RoundToInt(tapCoords.x);
-
-
-
-                //}
-
 
                 //Debug.Log("tapCoords is: " + tapCoords);
 
