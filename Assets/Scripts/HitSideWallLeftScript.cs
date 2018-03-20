@@ -66,7 +66,7 @@ public class HitSideWallLeftScript : MonoBehaviour {
             //Debug.Log("Contact point: " + collision.contacts[0].point);
 
             //Increase the y value so that it does not intersect with the floor
-            LocationToDisplayWallHitMultL = new Vector3(LocationToDisplayWallHitMultL.x + 1.0f, LocationToDisplayWallHitMultL.y + 1.0f, LocationToDisplayWallHitMultL.z);
+            LocationToDisplayWallHitMultL = new Vector3(LocationToDisplayWallHitMultL.x + 2.5f, LocationToDisplayWallHitMultL.y + 2.0f, LocationToDisplayWallHitMultL.z);
 
             StartCoroutine(FadeWallHitMult());
 
@@ -94,7 +94,6 @@ public class HitSideWallLeftScript : MonoBehaviour {
     public IEnumerator FadeWallHitMult()
     {
         BallHitWallMultGameObject.SetActive(true);
-
 
 
         //Set the speed to fade from full alpha to 0 over time (1/10) would be 10 seconds (1/5) 5 seconds, and so on

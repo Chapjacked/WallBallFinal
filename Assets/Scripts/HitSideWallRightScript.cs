@@ -68,7 +68,7 @@ public class HitSideWallRightScript : MonoBehaviour {
             //Debug.Log("Contact point: " + collision.contacts[0].point);
 
             //Increase the y value so that it does not intersect with the floor
-            LocationToDisplayWallHitMultR = new Vector3(LocationToDisplayWallHitMultR.x - 1.0f, LocationToDisplayWallHitMultR.y + 1.0f, LocationToDisplayWallHitMultR.z);
+            LocationToDisplayWallHitMultR = new Vector3(LocationToDisplayWallHitMultR.x - 2.5f, LocationToDisplayWallHitMultR.y + 2.0f, LocationToDisplayWallHitMultR.z);
 
             StartCoroutine(FadeWallHitMult());
 

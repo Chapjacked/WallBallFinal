@@ -63,13 +63,13 @@ public class BallHitFloorScript : MonoBehaviour
             //Debug.Log("Contact point: " + collision.contacts[0].point);
 
             //Increase the y value so that it does not intersect with the floor
-            LocationToDisplayWallHitMult = new Vector3(LocationToDisplayWallHitMult.x, LocationToDisplayWallHitMult.y + 1.0f, LocationToDisplayWallHitMult.z);
+            LocationToDisplayWallHitMult = new Vector3(LocationToDisplayWallHitMult.x + 1.0f, LocationToDisplayWallHitMult.y + 1.0f, LocationToDisplayWallHitMult.z);
 
             StartCoroutine(FadeWallHitMult());
 
             if (LocationToDisplayWallHitMult.x > -7.0f && LocationToDisplayWallHitMult.x < -4.8f)
             {
-                LocationToDisplayWallHitMult.x = -4.5f;
+                LocationToDisplayWallHitMult.x = -4.0f;
             }
 
             //Debug.Log("Location of Ball Hit Floor: " + LocationToDisplayWallHitMult.x);
