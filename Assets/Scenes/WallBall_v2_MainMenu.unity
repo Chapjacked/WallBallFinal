@@ -11462,6 +11462,110 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1323985652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1340095007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1340095012}
+  - component: {fileID: 1340095011}
+  - component: {fileID: 1340095010}
+  - component: {fileID: 1340095009}
+  - component: {fileID: 1340095008}
+  m_Layer: 0
+  m_Name: Ceiling (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1340095008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340095007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d36cc8d6ed76649883044c37fa50c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnBallScript: {fileID: 0}
+  BallBehaviorScript: {fileID: 114297401853828798, guid: 469000a7db2438d47aa2f8d09a78553c,
+    type: 2}
+  CatchBallScript: {fileID: 0}
+  ScoringScript: {fileID: 0}
+  RotateWallScript: {fileID: 0}
+  RedCubeKillBallScript: {fileID: 114134218738863470, guid: 2745579dddaaee4418051b44d23d42a8,
+    type: 2}
+--- !u!23 &1340095009
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340095007}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7f41cf19fc6a4ac4dbf4c81b3da0ea4f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1340095010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340095007}
+  m_Material: {fileID: 13400000, guid: 633335b2744f15148b86a92e220318a2, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1340095011
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340095007}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1340095012
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340095007}
+  m_LocalRotation: {x: -0.00073420344, y: -0.7071064, z: -0.00073420344, w: 0.7071064}
+  m_LocalPosition: {x: -7.35, y: 24.66, z: -3.37}
+  m_LocalScale: {x: 19.766329, y: 26.854359, z: 1.0000024}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 180.119, y: 90, z: 180}
 --- !u!1 &1355444038
 GameObject:
   m_ObjectHideFlags: 0
@@ -12491,8 +12595,7 @@ MonoBehaviour:
   HorizontalBoolValue: 0
   AllRedCubesSpawned: []
   CurrentlySpawnedObject: {fileID: 0}
-  CurrentlySpawnedObjectRigidbody: {fileID: 54652913308390654, guid: fe60191a07bbc5a4aaca997ded868037,
-    type: 2}
+  CurrentlySpawnedObjectRigidbody: {fileID: 0}
   CanvasGameObject: {fileID: 0}
 --- !u!4 &1466465713
 Transform:
@@ -14246,6 +14349,110 @@ Transform:
   m_Father: {fileID: 1466465713}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1836737876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1836737881}
+  - component: {fileID: 1836737880}
+  - component: {fileID: 1836737879}
+  - component: {fileID: 1836737878}
+  - component: {fileID: 1836737877}
+  m_Layer: 0
+  m_Name: Ceiling (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1836737877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836737876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d36cc8d6ed76649883044c37fa50c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnBallScript: {fileID: 0}
+  BallBehaviorScript: {fileID: 114297401853828798, guid: 469000a7db2438d47aa2f8d09a78553c,
+    type: 2}
+  CatchBallScript: {fileID: 0}
+  ScoringScript: {fileID: 0}
+  RotateWallScript: {fileID: 0}
+  RedCubeKillBallScript: {fileID: 114134218738863470, guid: 2745579dddaaee4418051b44d23d42a8,
+    type: 2}
+--- !u!23 &1836737878
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836737876}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7f41cf19fc6a4ac4dbf4c81b3da0ea4f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1836737879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836737876}
+  m_Material: {fileID: 13400000, guid: 633335b2744f15148b86a92e220318a2, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1836737880
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836737876}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1836737881
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836737876}
+  m_LocalRotation: {x: -0.00073420344, y: -0.7071064, z: -0.00073420344, w: 0.7071064}
+  m_LocalPosition: {x: 9.049, y: 24.624, z: -3.37}
+  m_LocalScale: {x: 19.766329, y: 26.854359, z: 1.0000024}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 180.119, y: 90, z: 180}
 --- !u!1 &1843886098
 GameObject:
   m_ObjectHideFlags: 0
@@ -14603,7 +14810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1860635786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14633,9 +14840,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1860635785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f5b2f06c0c705d438d8cdbdb1f2e0df, type: 3}
+  m_Script: {fileID: 11500000, guid: 80e52b1e1c6cc3849bed671489a61807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CatchBallScript: {fileID: 114535199165670482, guid: 5a980e53370753e478d608556ba16d08,
+    type: 2}
 --- !u!114 &1860635788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14677,7 +14886,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1860635787}
-        m_MethodName: DeactivateAds
+        m_MethodName: BuyNonConsumable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

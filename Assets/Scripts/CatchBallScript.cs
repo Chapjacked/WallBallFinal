@@ -69,6 +69,9 @@ public class CatchBallScript : MonoBehaviour {
     //Sound Controloler
     public GameObject SoundController;
 
+    //Remove Ads bool
+    public bool didPurchaseRemoveAdsProducts;
+
     // Use this for initialization
     void Start () {
         CatchesNum = 0.0f;
@@ -92,6 +95,11 @@ public class CatchBallScript : MonoBehaviour {
         //ScoringScript.NumCatchesMultText.text = ScoringScript.fCatchesMult.ToString();
 
 
+    }
+
+    public void RemoveAds()
+    {
+        didPurchaseRemoveAdsProducts = true;
     }
 
     public IEnumerator WaitFunction(float SecondsToWait)
