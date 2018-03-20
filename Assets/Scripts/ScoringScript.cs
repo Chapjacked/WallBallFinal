@@ -371,15 +371,17 @@ public class ScoringScript : MonoBehaviour
 
         if (CatchBallScript.numCounterForMissedCatchesBeforeAd == numMissedCatchesToPlayAd)
         {
-            if (CatchBallScript.didPurchaseRemoveAdsProducts == false)
+            if (PlayerPrefs.GetString("NoAdsShow") == "false")
             {
-                //run the ad
-                Chartboost.showInterstitial(CBLocation.Default);
-                Debug.Log("Showing Ad");
+                {
+                    //run the ad
+                    Chartboost.showInterstitial(CBLocation.Default);
+                    Debug.Log("Showing Ad");
 
-                numMissedCatchesToPlayAd = Random.Range(minMissedCatchesBeforeAd, maxMissedCatchesBeforeAd);
+                    numMissedCatchesToPlayAd = Random.Range(minMissedCatchesBeforeAd, maxMissedCatchesBeforeAd);
 
-                CatchBallScript.numCounterForMissedCatchesBeforeAd = 0;
+                    CatchBallScript.numCounterForMissedCatchesBeforeAd = 0;
+                }
             }
         }
 
