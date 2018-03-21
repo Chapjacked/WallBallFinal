@@ -74,7 +74,7 @@ public class BallHitFloorScript : MonoBehaviour
 
             //Debug.Log("Location of Ball Hit Floor: " + LocationToDisplayWallHitMult.x);
 
-            if (LocationToDisplayWallHitMult.x < 9.0f && LocationToDisplayWallHitMult.x > 6.0f)
+            if (LocationToDisplayWallHitMult.x < 10.0f && LocationToDisplayWallHitMult.x > 6.0f)
             {
                 LocationToDisplayWallHitMult.x = 6.0f;
             }
