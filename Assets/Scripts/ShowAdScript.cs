@@ -43,19 +43,22 @@ public class ShowAdScript : MonoBehaviour {
                 // Show interstitial at location HomeScreen. 
                 // See Chartboost.cs for available location options.
                 //Chartboost.showRewardedVideo(CBLocation.MainMenu);
-                Chartboost.showInterstitial(CBLocation.Default);
-                Debug.Log("Show Ad");
+                if (PlayerPrefs.GetString("NoAdsShow") == "false")
+                {
+                    Chartboost.showInterstitial(CBLocation.Default);
+                    print(PlayerPrefs.GetString("NoAdsShow"));
+                    Debug.Log("Show Ad");
+                    
+                }
             }
         }
-
-        Chartboost.showInterstitial(CBLocation.Default);
 
     }
 
     public void ShowRewardVideo()
     {
 
-        if (Chartboost.hasRewardedVideo(CBLocation.MainMenu) == true)
+        if (Chartboost.hasRewardedVideo(CBLocation.MainMenu) == true && PlayerPrefs.GetString("NoAdsShow") == "false")
         {
             Debug.Log("Showing Reward Video");
             Chartboost.showRewardedVideo(CBLocation.MainMenu);

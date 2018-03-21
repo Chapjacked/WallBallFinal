@@ -26,7 +26,7 @@ namespace CompleteProject
         // kProductIDSubscription - it has custom Apple and Google identifiers. We declare their store-
         // specific mapping to Unity Purchasing's AddProduct, below.
         public static string kProductIDConsumable = "consumable";
-        public static string kProductIDNonConsumable = "nonconsumable";
+        public static string kProductIDNonConsumable = "com.titanflightstudios.wallball.removeads";
         public static string kProductIDSubscription = "subscription";
 
         // Apple App Store-specific product identifier for the subscription product.
@@ -96,7 +96,16 @@ namespace CompleteProject
         {
             // Buy the non-consumable product using its general identifier. Expect a response either 
             // through ProcessPurchase or OnPurchaseFailed asynchronously.
+            //PlayerPrefs.SetString("NoAdsShow", "true");
+           // print(PlayerPrefs.GetString("NoAdsShow") );
             BuyProductID(kProductIDNonConsumable);
+        }
+
+        public void clickOnNoAds()
+        {
+            BuyProductID(kProductIDNonConsumable);
+            PlayerPrefs.SetString("NoAdsShow", "true");
+            print(PlayerPrefs.GetString("NoAdsShow"));
         }
 
 
