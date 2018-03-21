@@ -30,7 +30,6 @@ public static class XcodePostProcessor
 		var projPath = pathToBuiltProject + "/Unity-iPhone.xcodeproj/project.pbxproj";
 		var proj = new PBXProject();
 
-		var projString = File.ReadAllText(projPath);
 		proj.ReadFromFile(projPath);
 
 		string targetGUID = proj.TargetGuidByName("Unity-iPhone");
@@ -40,7 +39,7 @@ public static class XcodePostProcessor
 		proj.AddFrameworkToProject (targetGUID, "StoreKit.framework", false);
 		proj.AddFrameworkToProject (targetGUID, "WebKit.framework", false);
 
-		File.WriteAllText(projPath, projString);
+		File.WriteAllText(projPath, proj.WriteToString());
 	}
 }
 
