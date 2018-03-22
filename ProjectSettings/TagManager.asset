@@ -11,6 +11,7 @@ TagManager:
   - Floor
   - SideWall
   - SoundController
+  - Ceiling
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Red Cube
   - 
   - 
   - 

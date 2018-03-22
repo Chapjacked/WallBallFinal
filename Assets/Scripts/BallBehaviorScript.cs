@@ -27,22 +27,7 @@ public class BallBehaviorScript : MonoBehaviour {
 
     //Audio Source Component for Ball hitting Walls
     public AudioSource BallSFXSource;
-    //Audio Source Component for Floor
-    //public AudioSource FloorSFXSource;
-    //Audio Source Component for Side wall
-    //public AudioSource SideWallSFXSource;
-    //Audio Source Component for Miss
-    //public AudioSource MissedBallSFXSource;
-    //Audio Source Component for Hole
-    //public AudioSource HoleSFXSource;
-    
 
-    //Audio Source Clip for back wall
-    //public AudioClip BackWallSFXClip;
-    //Audio Source Component for Floor
-    //public AudioClip FloorSFXClip;
-    //Audio Source Component for Side wall
-    //public AudioClip SideWallSFXClip;
     //Audio Source Component for Miss
     public AudioClip MissedBallSFXClip;
     //Audio Source Component for hitting Hole
@@ -98,23 +83,29 @@ public class BallBehaviorScript : MonoBehaviour {
         }
         if (collision.gameObject.tag == "SideWall")
         {
-            //if (bShouldPlaySFX == true)
-            //{
                 numRandomBallSFX = Random.Range(0, numNumberOfBallSFX);
 
                 //Sound Effects for hitting the side wall
                 BallSFXSource.PlayOneShot(arrayBallSFX[numRandomBallSFX], 0.5f);
-            //}
+
         }
         if (collision.gameObject.tag == "Floor") 
         {
-            //if (bShouldPlaySFX)
-            //{
-                numRandomBallSFX = Random.Range(0, numNumberOfBallSFX);
+            numRandomBallSFX = Random.Range(0, numNumberOfBallSFX);
 
             //Sound Effects for hitting the floor
             BallSFXSource.PlayOneShot(arrayBallSFX[numRandomBallSFX], 0.5f);
-            //}
+
+            Debug.Log("Play Ball SFX Correctly");
+        }
+
+        if (collision.gameObject.tag == "Ceiling")
+        {
+            numRandomBallSFX = Random.Range(0, numNumberOfBallSFX);
+
+            //Sound Effects for hitting the floor
+            BallSFXSource.PlayOneShot(arrayBallSFX[numRandomBallSFX], 0.5f);
+
             Debug.Log("Play Ball SFX Correctly");
         }
 
