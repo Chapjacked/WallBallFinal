@@ -4823,8 +4823,8 @@ MonoBehaviour:
   WallsHitText: {fileID: 1808121921}
   WallsHitTextComponent: {fileID: 1051346425}
   numMissedCatchesToPlayAd: 0
-  minMissedCatchesBeforeAd: 4
-  maxMissedCatchesBeforeAd: 8
+  minMissedCatchesBeforeAd: 3
+  maxMissedCatchesBeforeAd: 6
   ContinueButton: {fileID: 335692967}
   MaxNumberOfContinuesUsed: {fileID: 48595517}
   highScoreText: {fileID: 1360651237}

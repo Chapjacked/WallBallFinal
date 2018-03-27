@@ -138,7 +138,7 @@ public class ScoringScript : MonoBehaviour
 
         WallsHitNum = 1.0f;
 
-        numMissedCatchesToPlayAd = Random.Range(5, 10);
+        numMissedCatchesToPlayAd = Random.Range(minMissedCatchesBeforeAd, maxMissedCatchesBeforeAd);
 
         Debug.Log("Number to play ad on: " + numMissedCatchesToPlayAd);
     }
