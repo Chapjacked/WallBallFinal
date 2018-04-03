@@ -195,13 +195,14 @@ public class GameManager : MonoBehaviour {
         if (score != null)
         {
             PlayerAllTimeHighScore = (int)score.value;
+            
+            // Update the high score text
+            PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
         }
     }
     
     public static void UpdateHighScore()
-    {
-        PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
-        
+    {   
         //PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
         //Save();
     }
