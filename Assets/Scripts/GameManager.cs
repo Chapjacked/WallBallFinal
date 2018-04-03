@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour {
 
         PlayerAllTimeHighScoreText = PlayerAllTimeHighScoreGameObject.GetComponent<Text>();
 
-        LoadStoredHighScoreValue();
+        //LoadStoredHighScoreValue();
 
         PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
         
@@ -135,15 +135,15 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     private void LoadStoredHighScoreValue()
     {
-        if (PlayerPrefs.HasKey("HighScore"))
-        {
-            PlayerAllTimeHighScore = PlayerPrefs.GetInt("HighScore");
-        }
-        else
-        {
-            PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
-            Save();
-        }
+        //if (PlayerPrefs.HasKey("HighScore"))
+        //{
+        //    PlayerAllTimeHighScore = PlayerPrefs.GetInt("HighScore");
+        //}
+        //else
+        //{
+        //    PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
+        //    Save();
+        //}
     }
 
     private void OnEnable()
@@ -200,8 +200,8 @@ public class GameManager : MonoBehaviour {
     
     public static void UpdateHighScore()
     {
-        PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
-        Save();
+        //PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
+        //Save();
     }
 
     public void ToggleMuteSFX()
@@ -242,6 +242,6 @@ public class GameManager : MonoBehaviour {
 
     private static void Save()
     {
-        PlayerPrefs.Save();
+        //PlayerPrefs.Save();
     }
 }
