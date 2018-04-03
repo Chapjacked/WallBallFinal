@@ -200,6 +200,8 @@ public class GameManager : MonoBehaviour {
     
     public static void UpdateHighScore()
     {
+        PlayerAllTimeHighScoreText.text = PlayerAllTimeHighScore.ToString();
+        
         //PlayerPrefs.SetInt("HighScore", PlayerAllTimeHighScore);
         //Save();
     }
