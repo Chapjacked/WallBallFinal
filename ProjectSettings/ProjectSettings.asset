@@ -164,7 +164,7 @@ PlayerSettings:
     iOS: com.TitanFlightStudios.WallBall
   buildNumber:
     iOS: 6
-  AndroidBundleVersionCode: 13
+  AndroidBundleVersionCode: 16
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

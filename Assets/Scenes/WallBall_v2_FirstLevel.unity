@@ -16547,6 +16547,96 @@ Transform:
   m_Father: {fileID: 1324437529}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1141754410
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 16.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 486122, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: minSessionCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: delayAfterInstallInHours
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: delayAfterLaunchInHours
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: postponeCooldownInHours
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: title
+      value: How are you liking Blitz Ball!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: message
+      value: Leave us your feedback!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: appStoreAppId
+      value: 1360193389
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: playMarketAppBundleId
+      value: com.TitanFlightStudios.WallBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: useIOSReview
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: minCustomEventsCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: requireInternetConnection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+      propertyPath: clearOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9832c6962fbc84751b4a53d557010a4e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1142670087
 GameObject:
   m_ObjectHideFlags: 0

@@ -237,6 +237,11 @@ public class ScoringScript : MonoBehaviour
         Leaderboards.GooglePlayLeaderboard.SubmitScore(GameManager.PlayerAllTimeHighScore);
 
         Cloud.Storage.Save();
+
+        PaperPlaneTools.RateBox.Instance.IncrementCustomCounter();
+        Debug.Log("Incremented custom counter: " + PaperPlaneTools.RateBox.Instance.Statistics.CustomEventCount);
+
+        PaperPlaneTools.RateBox.Instance.Show();
     }
 
     public IEnumerator Fade()
