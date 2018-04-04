@@ -11,7 +11,12 @@ public class RateScript : MonoBehaviour {
 
     public void RateUs()
     {
-        Application.OpenURL("market://details?id=com.TitanFlightStudios.WallBall/");
+#if UNITY_ANDROID
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.TitanFlightStudios.WallBall");
+#elif UNITY_IOS
+        Application.OpenURL("https://itunes.apple.com/us/app/blitz-ball/id1360193389?ls=1&mt=8");
+#endif
+
     }
 
 
